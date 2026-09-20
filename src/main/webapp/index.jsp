@@ -26,7 +26,7 @@
                 <% } %>
                 <button class="btn-glass" onclick="fetch('/api/v1/auth/logout',{method:'POST'}).then(()=>location.reload())">Logout</button>
             <% } %>
-            <a href="WEB-INF/views/cart.jsp"><button class="btn-glass">Cart</button></a>
+            <a href="cart.jsp"><button class="btn-glass">Cart</button></a>
         </div>
     </header>
 

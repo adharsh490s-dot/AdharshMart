@@ -38,7 +38,7 @@ async function executeMockCheckout() {
   const json = await res.json();
   if (json.success) {
     alert('Mock payment confirmed! Order placed successfully.');
-    window.location.href = '/WEB-INF/views/orders.jsp';
+    window.location.href = '/orders.jsp';
   } else {
     alert(json.error.message);
   }
