@@ -1,0 +1,10 @@
+target/
+*.class
+*.log
+.idea/
+*.iml
+.vscode/
+.env
+src/main/resources/config.properties
+*.mv.db
+*.trace.db
