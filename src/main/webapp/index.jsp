@@ -48,12 +48,20 @@
 
     <div class="modal-backdrop" id="authModal">
         <div class="modal-window">
-            <h2 style="margin-bottom:1rem">Sign In</h2>
+            <h2 id="authTitle" style="margin-bottom:1rem">Sign In</h2>
+            <div id="registerFields" style="display:none; gap:0.75rem; flex-direction:column; margin-bottom:1rem;">
+                <input type="text" id="registerName" placeholder="Full name">
+                <select id="registerRole" style="padding: 10px; border: 1px solid rgba(25,35,45,.18); border-radius: 4px;">
+                    <option value="BUYER">Buyer</option>
+                    <option value="SELLER">Seller</option>
+                </select>
+            </div>
             <input type="email" id="loginEmail" placeholder="Email">
             <input type="password" id="loginPass" placeholder="Password">
-            <div style="display:flex; justify-content:flex-end; gap:0.5rem">
-                <button class="btn-glass" onclick="closeModal('authModal')">Cancel</button>
-                <button class="btn-glass" onclick="submitLogin()">Submit</button>
+            <div style="display:flex; justify-content:flex-end; gap:0.5rem; margin-top:1rem; flex-wrap:wrap;">
+                <button class="btn-glass" onclick="closeModal('authModal'); resetAuthForm();">Cancel</button>
+                <button class="btn-glass" id="toggleAuthModeBtn" onclick="toggleAuthMode()">Create account</button>
+                <button class="btn-glass" id="submitAuthBtn" onclick="submitLogin()">Sign In</button>
             </div>
         </div>
     </div>
